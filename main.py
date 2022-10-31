@@ -15,12 +15,14 @@ def read_data():
     corpus = {}
     occurrence_list = {}
 
-    data = read_csv("Datasets/Harry Potter 3.csv", sep=";")
-    # print(data)
-    # print(data['Character'].unique())
+    data = read_csv("Datasets/Harry Potter 1.csv", sep=";")
+    hp2 = read_csv("Datasets/Harry Potter 2.csv", sep=";")
+    hp3 = read_csv("Datasets/Harry Potter 3.csv", sep=";")
+
+    data = data.append(hp2, ignore_index=True)
+    data = data.append(hp3, ignore_index=True)
 
     data['Character'] = data['Character'].str.replace(" ", "")
-    # print(data.Character.tolist())
     st_deviation_data_array = []
     csv_rows = []
 
@@ -36,10 +38,7 @@ def read_data():
             occurrence_list[key] = 1
 
     for character in corpus.keys():
-        # print(character)
         new_sentence = corpus[character].lower().translate(str.maketrans('', '', string.punctuation))
-        # print(new_sentence)
-    # print(corpus)
         stop_words = set(stopwords.words('english'))
         word_tokens = word_tokenize(new_sentence)
         word_tokens_count = len(word_tokens)
@@ -55,12 +54,7 @@ def read_data():
 
         prop_of_stop_word = (size_of_vocab * 100) / len(new_sentence.split())
 
-        csv_row = []
-        csv_row.append(character)
-        csv_row.append(word_tokens_count)
-        csv_row.append(size_of_vocab)
-        csv_row.append(avg_len_of_script)
-        csv_row.append(prop_of_stop_word)
+        csv_row = [character, word_tokens_count, size_of_vocab, avg_len_of_script, prop_of_stop_word]
         csv_rows.append(csv_row)
 
     file_header = ['Character', 'Tokens', 'Size_of_vocab', 'Avg_length', 'Prop_stop_word']
@@ -68,7 +62,7 @@ def read_data():
     standard_deviation = statistics.stdev(st_deviation_data_array)
     print(standard_deviation)
 
-    with open('new_harry_potter_3_analysis.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('harry_potter_all_analysis.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(file_header)
         writer.writerows(csv_rows)
