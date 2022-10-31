@@ -2,6 +2,11 @@ from pandas import *
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
+# Uncomment this when running for the first time
+# import nltk
+# nltk.download('stopwords')
+# nltk.download('punkt')
+
 
 def read_data():
     corpus = {}
@@ -32,7 +37,6 @@ def read_data():
 
     print(word_tokens)
     print(filtered_sentence)
-
 
     # corpus_df = DataFrame.from_dict(corpus, orient='index', columns=['Vocabulary'])
 
