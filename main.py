@@ -15,7 +15,7 @@ def read_data():
     corpus = {}
     occurrence_list = {}
 
-    data = read_csv("Datasets/Harry Potter 1.csv", sep=";")
+    data = read_csv("Datasets/Harry Potter 3.csv", sep=";")
     # print(data)
     # print(data['Character'].unique())
 
@@ -68,7 +68,7 @@ def read_data():
     standard_deviation = statistics.stdev(st_deviation_data_array)
     print(standard_deviation)
 
-    with open('new_harry_potter_1_analysis.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('new_harry_potter_3_analysis.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(file_header)
         writer.writerows(csv_rows)
