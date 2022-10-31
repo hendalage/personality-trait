@@ -1,4 +1,6 @@
 from pandas import *
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 
 
 def read_data():
@@ -18,7 +20,19 @@ def read_data():
         else:
             corpus[key] = data['Sentence'][i]
 
-    print(corpus)
+    # print(corpus)
+    stop_words = set(stopwords.words('english'))
+    word_tokens = word_tokenize(corpus['Dumbledore'])
+    # filtered_sentence = [w for w in word_tokens if not w.lower() in stop_words]
+    filtered_sentence = []
+
+    for w in word_tokens:
+        if w not in stop_words:
+            filtered_sentence.append(w)
+
+    print(word_tokens)
+    print(filtered_sentence)
+
 
     # corpus_df = DataFrame.from_dict(corpus, orient='index', columns=['Vocabulary'])
 
