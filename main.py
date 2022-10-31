@@ -22,7 +22,8 @@ def read_data():
     data = data.append(hp2, ignore_index=True)
     data = data.append(hp3, ignore_index=True)
 
-    data['Character'] = data['Character'].str.replace(" ", "")
+    data['Character'] = data['Character'].str.strip()
+    data['Character'] = data['Character'].str.lower()
     st_deviation_data_array = []
     csv_rows = []
 
