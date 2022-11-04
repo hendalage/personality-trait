@@ -5,13 +5,13 @@ import pandas as pd
 import re
 
 
-cEXT = pickle.load(open("data/models/cEXT.p", "rb"))
-cNEU = pickle.load(open("data/models/cNEU.p", "rb"))
-cAGR = pickle.load(open("data/models/cAGR.p", "rb"))
-cCON = pickle.load(open("data/models/cCON.p", "rb"))
-cOPN = pickle.load(open("data/models/cOPN.p", "rb"))
-vectorizer_31 = pickle.load(open("data/models/vectorizer_31.p", "rb"))
-vectorizer_30 = pickle.load(open("data/models/vectorizer_30.p", "rb"))
+cEXT = pickle.load(open("Datasets/models/cEXT.p", "rb"))
+cNEU = pickle.load(open("Datasets/models/cNEU.p", "rb"))
+cAGR = pickle.load(open("Datasets/models/cAGR.p", "rb"))
+cCON = pickle.load(open("Datasets/models/cCON.p", "rb"))
+cOPN = pickle.load(open("Datasets/models/cOPN.p", "rb"))
+vectorizer_31 = pickle.load(open("Datasets/models/vectorizer_31.p", "rb"))
+vectorizer_30 = pickle.load(open("Datasets/models/vectorizer_30.p", "rb"))
 
 
 def predict_personality(text):
