@@ -31,15 +31,20 @@ def read_data():
         key = data['Character'][i]
         st_deviation_data_array.append(len(data['Sentence'][i].lower()
                                            .translate(str.maketrans('', '', string.punctuation)).split()))
+        # if key in corpus.keys():
+        #     corpus[key] = corpus[key] + ' ' + data['Sentence'][i]
+        #     occurrence_list[key] = occurrence_list[key] + 1
         if key in corpus.keys():
-            corpus[key] = corpus[key] + ' ' + data['Sentence'][i]
+            corpus[key] = corpus[key] + ' ' + '|' + ' ' + data['Sentence'][i].lower()\
+                .translate(str.maketrans('', '', string.punctuation))
             occurrence_list[key] = occurrence_list[key] + 1
         else:
-            corpus[key] = data['Sentence'][i]
+            corpus[key] = data['Sentence'][i].lower().translate(str.maketrans('', '', string.punctuation))
             occurrence_list[key] = 1
 
     for character in corpus.keys():
-        new_sentence = corpus[character].lower().translate(str.maketrans('', '', string.punctuation))
+        new_sentence = corpus[character]
+        # new_sentence = corpus[character].lower().translate(str.maketrans('', '', string.punctuation))
         stop_words = set(stopwords.words('english'))
         word_tokens = word_tokenize(new_sentence)
         word_tokens_count = len(word_tokens)
@@ -55,15 +60,16 @@ def read_data():
 
         prop_of_stop_word = (size_of_vocab * 100) / len(new_sentence.split())
 
-        csv_row = [character, word_tokens_count, size_of_vocab, avg_len_of_script, prop_of_stop_word]
+        csv_row = [character, new_sentence]
         csv_rows.append(csv_row)
 
-    file_header = ['Character', 'Tokens', 'Size_of_vocab', 'Avg_length', 'Prop_stop_word']
+    file_header = ['Character', 'Sentence']
+    # file_header = ['Character', 'Tokens', 'Size_of_vocab', 'Avg_length', 'Prop_stop_word']
 
     standard_deviation = statistics.stdev(st_deviation_data_array)
     print(standard_deviation)
 
-    with open('harry_potter_all_analysis.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('harry_potter_all_character_full_sentence_with_breakpoints.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(file_header)
         writer.writerows(csv_rows)
