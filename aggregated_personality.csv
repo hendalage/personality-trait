@@ -1,0 +1,109 @@
+Character,EXT,NEU,AGR,CON,OPN
+dumbledore,0,0,0,1,0
+mcgonagall,1,1,0,1,1
+hagrid,0,0,1,1,0
+petunia,0,0,1,1,0
+dudley,1,1,0,1,1
+vernon,1,1,0,1,1
+harry,0,0,0,1,0
+snake,1,1,0,0,1
+someone,1,1,1,0,1
+barkeep tom,0,1,1,1,1
+man,0,1,1,0,1
+witch,0,1,1,0,1
+quirrell,0,1,0,1,1
+boy,1,1,0,1,1
+goblin,0,1,1,0,1
+griphook,1,1,0,0,1
+ollivander,0,1,0,1,1
+trainmaster,1,1,1,0,1
+mrs. weasley,0,0,1,1,0
+george,0,1,1,0,0
+fred,0,1,1,0,1
+ginny,1,1,0,1,1
+ron,0,0,0,1,0
+woman,1,1,0,0,1
+hermione,0,1,1,1,0
+neville,1,1,1,0,0
+malfoy,0,1,1,1,1
+whispers,1,1,1,1,1
+sorting hat,0,0,0,0,1
+seamus,1,0,1,1,0
+percy,1,0,0,1,1
+sir nicholas,1,0,1,1,0
+girl,1,0,1,1,1
+man in paint,1,1,0,0,1
+fat lady,1,0,0,1,1
+snape,0,0,1,1,0
+dean,1,1,0,0,1
+madam hooch,1,0,0,0,1
+class,1,1,0,1,1
+filch,0,0,1,1,1
+all,1,1,1,0,1
+oliver,0,0,1,1,1
+flitwick,1,0,1,1,1
+draco,0,0,0,0,1
+ron and harry,1,1,0,1,1
+oiiver,0,1,1,1,1
+lee jordan,1,0,0,0,1
+gryffindors,1,1,1,0,1
+flint,1,1,0,1,1
+crowd,1,1,1,0,1
+lee  jordan,0,1,0,0,1
+hermoine,1,1,1,1,1
+all 3,1,1,0,0,1
+firenze,0,1,0,1,1
+voldemort,0,1,0,0,1
+students,1,1,0,0,1
+uncle vernon,1,0,0,1,1
+aunt petunia,0,1,1,1,1
+dobby,0,0,0,1,0
+aunt petunia & dudley,1,1,0,0,1
+mr. weasley,1,0,1,1,0
+"fred, george, ron",1,1,0,0,1
+"fred, george, ron, harry",1,1,0,0,1
+mr. borgin,0,0,0,0,1
+lucius malfoy,0,0,0,0,0
+photographer,0,0,0,1,1
+lockhart,1,0,0,0,1
+harry and ron,1,1,0,0,1
+professor sprout,1,0,1,0,1
+penelope clearwater,1,1,0,0,1
+colin,1,1,1,0,1
+gilderoy lockhart,0,0,0,1,0
+cornish pixies,1,1,0,0,1
+wood,1,0,0,1,0
+voice,0,1,0,0,0
+picture,1,1,0,0,1
+slytherins,1,1,0,0,1
+madam pomfrey,1,1,1,1,1
+moaning myrtle,1,1,1,0,1
+justin finch-fletchley,1,1,0,0,1
+crabbe,1,1,0,1,1
+diary,1,0,0,0,1
+tom riddle,0,0,0,0,0
+harry-ron-hermione,1,1,0,0,1
+fudge,1,1,0,0,0
+aragog,0,1,0,1,0
+student,1,1,0,0,1
+aunt marge,0,1,0,0,1
+stan shunpike,1,0,0,1,1
+shrunken head,0,1,0,0,1
+tom,0,1,1,0,1
+vendor,1,1,0,0,1
+housekeeper,1,1,1,0,1
+lupin,0,0,1,1,0
+trelawney,0,0,1,1,1
+bem,0,1,1,1,1
+pansy parkinson,1,1,0,0,1
+parvati,1,1,0,0,1
+teacher,0,1,0,0,1
+fred & george,0,1,0,0,1
+madam rosmerta,0,1,0,0,1
+shrunken head 1,1,1,0,0,1
+shrunken head 2,1,1,0,0,1
+goyle,0,1,0,0,1
+sirius,0,0,1,0,1
+pettigrew,1,1,1,1,1
+boy 1,1,1,1,0,1
+boy 2,1,0,0,0,1
