@@ -29,17 +29,19 @@ def read_data():
 
     for i in data.index:
         key = data['Character'][i]
-        st_deviation_data_array.append(len(data['Sentence'][i].lower()
-                                           .translate(str.maketrans('', '', string.punctuation)).split()))
+        st_deviation_data_array.append(len(data['Sentence'][i].lower().split()))
+                                           # .translate(str.maketrans('', '', string.punctuation)).split()))
         # if key in corpus.keys():
         #     corpus[key] = corpus[key] + ' ' + data['Sentence'][i]
         #     occurrence_list[key] = occurrence_list[key] + 1
         if key in corpus.keys():
-            corpus[key] = corpus[key] + ' ' + '|' + ' ' + data['Sentence'][i].lower()\
-                .translate(str.maketrans('', '', string.punctuation))
+            corpus[key] = corpus[key] + ' ' + data['Sentence'][i].lower()
+            # corpus[key] = corpus[key] + ' ' + '|' + ' ' + data['Sentence'][i].lower()
+                # .translate(str.maketrans('', '', string.punctuation))
             occurrence_list[key] = occurrence_list[key] + 1
         else:
-            corpus[key] = data['Sentence'][i].lower().translate(str.maketrans('', '', string.punctuation))
+            corpus[key] = data['Sentence'][i].lower()
+                # .translate(str.maketrans('', '', string.punctuation))
             occurrence_list[key] = 1
 
     for character in corpus.keys():
@@ -69,8 +71,8 @@ def read_data():
     standard_deviation = statistics.stdev(st_deviation_data_array)
     print(standard_deviation)
 
-    with open('harry_potter_all_character_full_sentence_with_breakpoints.csv', 'w', encoding='UTF8', newline='') as f:
-        writer = csv.writer(f)
+    with open('harry_potter_all_character_full_sentence.csv', 'w', encoding='UTF8', newline='') as f:
+        writer = csv.writer(f, delimiter = ';')
         writer.writerow(file_header)
         writer.writerows(csv_rows)
 
