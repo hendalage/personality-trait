@@ -14,20 +14,14 @@ cOPN = pickle.load(open("Datasets/models/cOPN.p", "rb"))
 vectorizer_31 = pickle.load(open("Datasets/models/vectorizer_31.p", "rb"))
 vectorizer_30 = pickle.load(open("Datasets/models/vectorizer_30.p", "rb"))
 
-aggregated_text = read_csv("harry_potter_all_character_full_sentence.csv", sep=";", lineterminator='\n')
+aggregated_text = read_csv("harry_potter_all_character_full_sentence.csv", sep=",", lineterminator='\n')
 
 file_header = ['Character', 'EXT', 'NEU', 'AGR', 'CON', 'OPN']
 csv_rows = []
 
 
-<<<<<<< HEAD
-
 def predict_personality(text1):
     sentences = re.split("(?<=[.!?]) +", text1)
-=======
-def predict_personality(_text):
-    sentences = re.split("(?<=[.!?]) +", _text)
->>>>>>> e371ee72028d0eb65d32eaf7df990f3882512038
     text_vector_31 = vectorizer_31.transform(sentences)
     text_vector_30 = vectorizer_30.transform(sentences)
     EXT = cEXT.predict(text_vector_31)
