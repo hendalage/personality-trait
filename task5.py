@@ -4,6 +4,7 @@ import plotly.express as px
 import re
 import csv
 from pandas import *
+import string
 
 
 cEXT = pickle.load(open("Datasets/models/cEXT.p", "rb"))
@@ -39,7 +40,7 @@ for i in data.index:
 
 
     for sentence in split_sentences_list:
-        predictions = predict_personality(sentence)
+        predictions = predict_personality(sentence.lower().translate(str.maketrans('', '', string.punctuation)))
         csv_row = []
         csv_row.append(key)
         csv_row.append(predictions[0])

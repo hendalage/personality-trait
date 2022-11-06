@@ -22,8 +22,8 @@ csv_rows = []
 
 
 
-def predict_personality(_text):
-    sentences = re.split("(?<=[.!?]) +", text)
+def predict_personality(text1):
+    sentences = re.split("(?<=[.!?]) +", text1)
     text_vector_31 = vectorizer_31.transform(sentences)
     text_vector_30 = vectorizer_30.transform(sentences)
     EXT = cEXT.predict(text_vector_31)

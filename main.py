@@ -35,13 +35,13 @@ def read_data():
         #     corpus[key] = corpus[key] + ' ' + data['Sentence'][i]
         #     occurrence_list[key] = occurrence_list[key] + 1
         if key in corpus.keys():
-            corpus[key] = corpus[key] + ' ' + data['Sentence'][i].lower()
+            corpus[key] = corpus[key] + ' ' + data['Sentence'][i].lower().translate(str.maketrans('', '', string.punctuation))
             # corpus[key] = corpus[key] + ' ' + '|' + ' ' + data['Sentence'][i].lower()
-                # .translate(str.maketrans('', '', string.punctuation))
+
             occurrence_list[key] = occurrence_list[key] + 1
         else:
-            corpus[key] = data['Sentence'][i].lower()
-                # .translate(str.maketrans('', '', string.punctuation))
+            corpus[key] = data['Sentence'][i].lower().translate(str.maketrans('', '', string.punctuation))
+
             occurrence_list[key] = 1
 
     for character in corpus.keys():
@@ -72,7 +72,7 @@ def read_data():
     print(standard_deviation)
 
     with open('harry_potter_all_character_full_sentence.csv', 'w', encoding='UTF8', newline='') as f:
-        writer = csv.writer(f, delimiter = ';')
+        writer = csv.writer(f)
         writer.writerow(file_header)
         writer.writerows(csv_rows)
 
