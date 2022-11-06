@@ -18,15 +18,22 @@ x = data.loc[:, features].values
 # Separating out the target
 y = data.loc[:,['Character']].values
 
+print(x.shape)
+
 # Standardizing the features
 x_s = StandardScaler().fit_transform(x)
+print(x_s)
+print(x_s.shape)
 
 pca = PCA(n_components=2)
 principalComponents = pca.fit_transform(x_s)
 principalDf = pd.DataFrame(data = principalComponents
              , columns = ['PC1', 'PC2'])
 
-finalDf = pd.concat([principalDf, data[['Character']]], axis = 1)
+print(principalDf)
+
+finalDf = pd.concat([data[['Character']], principalDf], axis=1)
+print(finalDf)
 
 
 # # calculating the %
