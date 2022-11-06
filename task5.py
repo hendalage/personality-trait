@@ -28,8 +28,8 @@ def predict_personality(text):
 
 
 # data = read_csv("Datasets/Harry Potter 1.csv", sep=";")
-data = read_csv("harry_potter_all_character_full_sentence.csv", sep=";")
-# data = read_csv("harry_potter_all_character_full_sentence_with_breakpoints.csv", sep=";")
+# data = read_csv("harry_potter_all_character_full_sentence.csv", sep=";")
+data = read_csv("harry_potter_all_character_full_sentence_with_breakpoints.csv", sep=";")
 csv_header = ['Character', 'EXT', 'NEU', 'AGR', 'CON', 'OPN', 'Sentence']
 csv_rows =[]
 for i in data.index:
@@ -46,13 +46,15 @@ for i in data.index:
         csv_row.append(predictions[1])
         csv_row.append(predictions[2])
         csv_row.append(predictions[3])
+        csv_row.append(predictions[4])
         csv_row.append(sentence)
         csv_rows.append(csv_row)
 
 
         # print("predicted personality:", predictions[0])
 
-with open('harry_potter_all_sentences_with_personality_characterise.csv', 'w', encoding='UTF8', newline='') as f:
+# with open('harry_potter_all_sentences_with_personality_characterise.csv', 'w', encoding='UTF8', newline='') as f:
+with open('harry_potter_all_sentences_with_personality.csv', 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f, delimiter=';')
     writer.writerow(csv_header)
     writer.writerows(csv_rows)
