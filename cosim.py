@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
 
 data = pd.read_csv("aggregated_personality.csv")
 print(data)
@@ -25,4 +26,12 @@ print(cos_array.shape)
 
 # saving to csv(replace if necessary)
 a = np.asarray(cos_array)
-np.savetxt("Cosine Matrix", a, delimiter=",")
+np.savetxt("cosine_matrix.csv", a, delimiter=",")
+
+# plot
+plt.style.use('_mpl-gallery-nogrid')
+fig, ax = plt.subplots()
+fig.set_size_inches(20, 20)
+fig.set_dpi(200)
+ax.imshow(a)
+plt.show()
