@@ -4,6 +4,9 @@ import plotly.express as px
 import re
 import csv
 from pandas import *
+from sklearn.metrics.pairwise import cosine_similarity
+from numpy import dot
+from numpy.linalg import norm
 
 
 cEXT = pickle.load(open("Datasets/models/cEXT.p", "rb"))
