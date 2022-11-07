@@ -1,5 +1,13 @@
 # personality-trait
-NLP 2022 Project
+NLP 2022 Project - Project 23
+
+Chathushka Hendalage - Y67689797
+
+Achira Hendalage - 2208083
+
+Piushana Abeygunawardena - Y69231913
+
+Ashan Walpitage - Y63562881
 
 # Standard deviation 
 HP1 - 4.365901167848306
