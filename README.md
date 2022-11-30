@@ -9,7 +9,11 @@ Piushana Abeygunawardena - Y69231913
 
 Ashan Walpitage - Y63562881
 
-# Standard deviation 
+
+# Compatible version
+Python - V3.0 or up
+
+# Standard deviation results
 HP1 - 4.365901167848306
 HP2 - 4.58804902825555
 HP3 - 4.025253494012407
@@ -20,18 +24,19 @@ Standard dev. of cosine similarity = 0.4426342019510506
 
 # Project File Details
 
-main.py -> Used to pre-process raw data (HP1, HP2, HP3)
+We have seperated code in to tasks. All files can run individually. All output .csv files save inside Results folder.
+All source data sets are inside the Datasets folder. 
 
-cosm.py -> Find the cosine similarity
+task1 and task1_part2 -> Used to pre-process raw data (HP1, HP2, HP3)
 
-big5_predict.py -> To find the aggregated personality
+task2 and task2_part2_pca -> To perform Principal component analysis
 
-PCA.py -> To perform Principal component analysis
-
-sntiment.py -> To perform Sentimental analysis
+task3_cosine_sim -> Find the cosine similarity
 
 task5.py -> Find the personality of each sentence and the character
 
 task6.py -> Find the personality of each person sum of all results
 
 task6_1 -> Find the cosine similarity between sum of each person personality and against each sentence and the standard deviation
+
+task7_sentimental_analysis -> To perform Sentimental analysis
