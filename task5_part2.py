@@ -26,7 +26,7 @@ def predict_personality(text):
     return [EXT[0], NEU[0], AGR[0], CON[0], OPN[0]]
 
 
-data = read_csv("Results/harry_potter_all_character_full_sentence_with_breakpoints.csv", sep=";")
+data = read_csv("Results/harry_potter_all_character_full_sentence.csv", sep=",")
 csv_header = ['Character', 'EXT', 'NEU', 'AGR', 'CON', 'OPN', 'Sentence']
 csv_rows =[]
 for i in data.index:
@@ -48,7 +48,10 @@ for i in data.index:
         csv_rows.append(csv_row)
 
 
-with open('Results/harry_potter_all_sentences_with_personality.csv', 'w', encoding='UTF8', newline='') as f:
+        # print("predicted personality:", predictions[0])
+
+with open('Results/harry_potter_all_sentences_with_personality_characterise.csv', 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f, delimiter=';')
     writer.writerow(csv_header)
     writer.writerows(csv_rows)
+
