@@ -14,7 +14,7 @@ x = data.loc[:, features].values
 # Separating out the character
 y = data.loc[:, ['Character']].values
 
-# Standardizing the features
+# Standardizing the features(this part is not essential for this step)
 x_s = StandardScaler().fit_transform(x)
 print(x)
 
