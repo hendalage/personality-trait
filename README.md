@@ -19,7 +19,7 @@ All source data sets are inside the Datasets folder.
 
 task1 and task1_part2 -> Used to pre-process raw data (HP1, HP2, HP3)
 
-task2 and task2_part2_pca -> To perform Principal component analysis
+task2 and task2_part2_pca -> To perform Principal component analysis, this generates a plot with 2 principle components. Please note that all 109 characters from the 3 movies are plotted in 2 dimensions depending on their personalities. There are overlapped characters have the same set of personality values.This is due to the results of the personality trait being boolean values and therefore its quite easy for multiple characters to have the same personality matrix.
 
 task3_cosine_sim -> Find the cosine similarity
 
