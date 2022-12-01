@@ -21,9 +21,9 @@ task1 and task1_part2 -> Used to pre-process raw data (HP1, HP2, HP3)
 
 task2 and task2_part2_pca -> To perform Principal component analysis, this generates a plot with 2 principle components. Please note that all 109 characters from the 3 movies are plotted in 2 dimensions depending on their personalities. There are overlapped characters have the same set of personality values.This is due to the results of the personality trait being boolean values and therefore its quite easy for multiple characters to have the same personality matrix.
 
-task3_cosine_sim -> Find the cosine similarity
+task3_cosine_sim -> Find the cosine similarity. This file uses the function "cosine_similarity()" and calculates the cosine similarites of all the 109 characters against each other. At the end it generates a color sensitive chart to visualize which characters are similar.(for exampple the darker diagonal in the matrix represents their similarity with themselves and hence it appears dark. A clearer representation of this is interpretted in "Figure 6" of the report highlighing main characters.
 
-task5.py -> Find the personality of each sentence and the character
+task5.py -> Find the personality of each sentence and the character using Johannes Wieser implementation. the corresponding .csv files are also generated.
 
 task6.py -> Find the personality of each person sum of all results
 
